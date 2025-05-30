@@ -1,0 +1,28 @@
+<div class="container-sm my-5">
+  <div class="row">
+    <form [formGroup]="loginForm" (ngSubmit)="OnSubmit()">
+      <h1>Login</h1>
+      <div class="mb-3">
+        <label class="form-label">Indirizzo email</label>
+        <input
+          type="email"
+          class="form-control"
+          placeholder="Inserisci il tuo username"
+          formControlName="email"
+        />
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          placeholder="Inserisci la password"
+          formControlName="password"
+        />
+      </div>
+      <div class="d-grid">
+        <button class="btn btn-primary" [disabled]="loginForm.invalid">Login</button>
+      </div>
+    </form>
+  </div>
+</div>
